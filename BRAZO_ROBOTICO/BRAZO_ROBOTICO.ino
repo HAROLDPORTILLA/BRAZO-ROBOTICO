@@ -1,40 +1,59 @@
 #include <Servo.h>
-#define pinD 9
-#define pinI 10
-#define pinG 5
-#define pinB 6
-#define iniTD  90
-#define iniTI 90
-#define iniTG  90
-#define iniTB  90
 
-Servo D;//movimiento adelante atras
-Servo I;//comprime el brazo adelante atras 
-Servo G;//movimiento de la garra 
-Servo B;//movimiento de la base 
+Servo servoderecha;//servo lado derecho
+Servo servoizquierda;//servo lado izquierdo
+Servo servogarra;//servo de la garra
+Servo servobase;//servo de la base
+
+
+int val;    
 
 void setup() {
+
+  servoderecha.write(60);
+  servogarra.attach(9);  
+  servoderecha.attach(10);
+  servoizquierda.attach(11);
+  servoizquierda.write(0);
+  servobase.attach(12);
+  servobase.write(0);
   Serial.begin(9600);
-  D.attach(pinD);
-  I.attach(pinI);
-  G.attach(pinB);
-  B.attach(pinB);
-  // put your setup code here, to run once:
 }
-
 void loop() {
-  D = Serial.read();
-  if(D=='W')
-  { 
-    D.write(30);
-  }else
-  {if()
-    }
-  
-  I.write(30);
-  G.write(30);
-  B.write(30);
- 
-  // put your main code here, to run repeatedly:
+Serial.println(servoderecha.read());
+  val = Serial.read();
+    
+if(val=='a'){
+servoderecha.write(0);
+delay(20);}
+  if(val=='q'){
+  servoderecha.write(90);
+  delay(20);}
+    if(val=='w'){
+    servoizquierda.write(0);
+    delay(20);}
+      if(val=='s'){
+      servoizquierda.write(180);
+      delay(20);}
+        if(val=='c'){
+        servobase.write(0);
+        delay(20);}
+          if(val=='z'){
+          servobase.write(180);
+          delay(20);}
+            if(val=='x'){
+            servobase.write(90);
+            delay(20);}
+
+  if(val=='1'){          
+  servogarra.write(10);                 
+  delay(20);
 
 }
+  if(val=='2'){
+    servogarra.write(40);
+    delay(20);
+   
+    }
+
+  }
