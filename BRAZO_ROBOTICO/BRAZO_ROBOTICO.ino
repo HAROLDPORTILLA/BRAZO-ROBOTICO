@@ -49,4 +49,12 @@ delay(20);}
   servogarra.write(10);                 
   delay(20);
 
+}
+  if(val=='2'){
+    servogarra.write(40);
+    delay(20);
+   
+    }
 
+  }
+  
