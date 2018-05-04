@@ -46,12 +46,12 @@ delay(20);}
             delay(20);}
 
   if(val=='1'){          
-  servogarra.write(10);                 
+  servogarra.write(30);                 
   delay(20);
 
 }
   if(val=='2'){
-    servogarra.write(40);
+    servogarra.write(90);
     delay(20);
    
     }
