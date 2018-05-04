@@ -32,4 +32,13 @@ delay(20);}
     if(val=='w'){
     servoizquierda.write(0);
     delay(20);}
-      
+      if(val=='s'){
+      servoizquierda.write(180);
+      delay(20);}
+        if(val=='c'){
+        servobase.write(0);
+        delay(20);}
+          if(val=='z'){
+          servobase.write(180);
+          delay(20);}
+           
