@@ -41,4 +41,12 @@ delay(20);}
           if(val=='z'){
           servobase.write(180);
           delay(20);}
-           
+            if(val=='x'){
+            servobase.write(90);
+            delay(20);}
+
+  if(val=='1'){          
+  servogarra.write(10);                 
+  delay(20);
+
+
